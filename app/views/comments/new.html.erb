@@ -1,0 +1,25 @@
+<h1> New Comment</h1>
+
+<% form_for([@post, @comment]) do |f| %>
+	<%= f.error_messages %>
+	<p>
+	  <%= f.label :commenter %> <br />
+	  <%= f.text_field :commenter %>
+	</p>
+
+        <p>
+          <%= f.label :body %> <br />
+          <%= f.text_area :body %>
+        </p>
+
+        <p>
+          <%= f.submit "Create" %> <br />
+        </p>
+
+<% end %>
+
+
+<%= link_to 'Back', post_comments_path(@post) %>
+
+
+<p>Find me in app/views/comments/new.html.erb</p>
